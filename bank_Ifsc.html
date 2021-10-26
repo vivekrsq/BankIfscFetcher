@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Ifsc code</title>
+    <script src="https://kit.fontawesome.com/9b920de77d.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(210, 253, 255);
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        .container {
+
+            align-items: center;
+            /* background-color: grey; */
+            border: .5px solid rgb(71, 71, 71);
+            border-radius: 10px;
+            height: 370px;
+            width: 500px;
+            margin: 50px auto;
+            padding: 23px;
+        }
+
+        span {
+            position: absolute;
+            top: 33%;
+            left: 43%;
+            font-size: 14px;
+            color: red;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .input {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .input input {
+            height: 28px;
+            width: 203px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid grey;
+            padding: 0 10px;
+            text-transform: uppercase;
+        }
+
+        .input button {
+            width: 62px;
+            height: 29px;
+            border-radius: 5px;
+            background: white;
+            border: 1px solid grey;
+        }
+
+        .input button:hover {
+            background-color: rgb(3, 99, 40);
+            color: white;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .output {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 80px;
+        }
+
+        .output input {
+            width: 203px;
+            height: 26px;
+            border-radius: 6px;
+            border: 1px solid grey;
+
+
+            padding: 0 10px;
+            color: black;
+            background-color: #ffffff;
+        }
+
+        #copyIcon {
+            
+            position: absolute;
+            width: 94px;
+            left: 63%;
+            bottom: 1%;
+            font-size: 22px;
+            color: grey;
+            height: 45px;
+
+        }
+
+        #copyIcon p {
+            font-size: 15px;
+        }
+
+        #copyIcon:hover {
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Check IFSC code of your Bank</h1>
+        <span id="errMsg"></span>
+        <div class="form">
+            <form action="" method="post">
+                <div class="input">
+                    <label for="inputIfsc">Enter the IFSC code</label>
+                    <input type="text" id="inputIfsc">
+                    <button type="submit" id="chkBtn" name="submit">Check</button>
+                </div>
+                <div class="output">
+                    <label for="bankName">Bank Name</label>
+                    <input type="text" id="bankName" disabled>
+                </div>
+
+                <div class="output">
+                    <label for="branchName">Branch</label>
+                    <input type="text" id="branchName" disabled>
+                </div>
+
+                <div class="output">
+                    <label for="district">District</label>
+                    <input type="text" id="district" disabled>
+                </div>
+
+                <div class="output">
+                    <label for="state">State</label>
+                    <input type="text" id="state" disabled>
+                </div>
+                <div class="copyIcon" id="copyIcon"><i class="far fa-copy fa-lg"></i>
+                    <p>hello</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="js/bank_Ifsc.js"></script>
+
+</html>
